@@ -63,11 +63,10 @@ function Pose() {
     canvas.current.height = videoHeight
 
     // I have a map pose["keypoint"] -> which contains a map with key "nose" where key is nose i want the map positions and key vals x and y ... this is a graph lol
-    var x_path = pose["keypoints"][1]["position"]["x"]
-    var y_path = pose["keypoints"][1]["position"]["y"]
-    ctx.fillRect(x_path, y_path, 100, 100);
-    ctx.clearRect(x_path, y_path, 60, 60);
-    ctx.strokeRect(x_path, y_path, 50, 50);
+    var x_path = ((pose["keypoints"][1]["position"]["x"]) + (pose["keypoints"][2]["position"]["x"])) / 2
+    var y_path = ((pose["keypoints"][1]["position"]["y"]) +  (pose["keypoints"][2]["position"]["y"])) / 2
+    ctx.font = '48px serif';
+    ctx.fillText('PV', x_path, y_path);
     console.log(pose['keypoints'])
     //drawSkeleton(pose["keypoints"], 0.5, ctx)
     //drawKeypoints(pose["keypoints", 0.5, ctx])

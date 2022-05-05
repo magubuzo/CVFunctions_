@@ -1,28 +1,29 @@
 import React from 'react'
-import { TextBg, Text, VideoSpace, PlayerExample } from './about_comonents.js'
-import HowTo from "../../Videos/SnapTutorial.mkv"
-import { Player } from 'video-react';
+import { TextBg, Text, LinkTxt } from './about_comonents.js'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 export const AboutScreen = () => {
-  const videoSrc = HowTo
-  const psoter = "https://images.unsplash.com/photo-1531161339673-a943dd10e29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c25hcGNoYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
   return (
 
-    <div>
       <TextBg>
-        <Text>Hello World! This is a summery on how different fnctions were made on this webpage
-        So lets learn about how the filters are made anddd how you can make your own
-        Before We get started it is best you understand the basics of react js as I will try
-        To explain the step by step however there will be things that I may bursh over
-        simply because this is a tutorial on the AR Filters not react JS. I also may not use the most conventional
-        practices since react is not a language I use often.
+    <div>
+        <Text>Hello World! This is pvamu computr vision's webpge to host filters or anything else with compulter vision.
+
+          <br></br>
+          <br></br>
+          <br></br>
+          IF YOU ARE INTRESED IN HELPING (contrabutiong to this project) email   <a href='yowang@pvamu.edu'><LinkTxt>yowang@pvamu.edu</LinkTxt></a> <br></br>
+          There are several computer vision filters currently on on this page <br></br> <br></br>
+          1) A simple PV filter. (using Tensorflow JS React JS) <br></br> <br></br>
+          2) A face mesh filter. (using Tensorflow JS and React JS) <br></br> <br></br>
+          3) A Cartoonizer filter. (using Tensorflow JS and html/css, by Xinuri Wang and Jinze Yu at the University of Tokyo, modified by Pratap Vardhan)
         </Text>
 
 
-      </TextBg>
     </div>
+      </TextBg>
  
   )
 }
